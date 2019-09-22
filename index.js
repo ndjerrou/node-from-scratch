@@ -11,13 +11,6 @@ const StringDecoder = require('string_decoder').StringDecoder;
 const varConfig = require('./config');
 const { httpPort, envName, httpsPort } = varConfig;
 const fs = require('fs');
-const _data = require('./lib/data');
-
-//TESTING
-// @TODO delete this
-_data.delete('test', 'newFile', err => {
-  console.log('This was the error', err);
-});
 
 // we are instantiating the http server
 const httpServer = http.createServer((req, res) => {
